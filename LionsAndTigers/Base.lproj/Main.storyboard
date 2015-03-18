@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,182 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOo-QD-9tq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="GD2-FE-fI5" kind="embed" id="RJI-N2-0QE"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bio-uJ-sxA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="915-9c-YBs" kind="embed" id="abp-l9-j9w"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bio-uJ-sxA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0ih-i9-YHV">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="bio-uJ-sxA" secondAttribute="trailing" constant="-16" id="56w-WQ-BpX">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="rOo-QD-9tq" secondAttribute="trailing" constant="-16" id="9x5-rv-X5b"/>
+                            <constraint firstItem="rOo-QD-9tq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Hv9-ob-H7Y"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bio-uJ-sxA" secondAttribute="bottom" id="MYl-bC-cNR"/>
+                            <constraint firstItem="rOo-QD-9tq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="V1C-jp-Rlv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rOo-QD-9tq" secondAttribute="bottom" id="Xv8-gS-Y3W"/>
+                            <constraint firstItem="bio-uJ-sxA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="vTr-Cp-5dQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rOo-QD-9tq"/>
+                                <exclude reference="bio-uJ-sxA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0ih-i9-YHV"/>
+                                <exclude reference="56w-WQ-BpX"/>
+                                <exclude reference="vTr-Cp-5dQ"/>
+                                <exclude reference="9x5-rv-X5b"/>
+                                <exclude reference="Hv9-ob-H7Y"/>
+                                <exclude reference="V1C-jp-Rlv"/>
+                                <exclude reference="MYl-bC-cNR"/>
+                                <exclude reference="Xv8-gS-Y3W"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rOo-QD-9tq"/>
+                                <include reference="bio-uJ-sxA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0ih-i9-YHV"/>
+                                <include reference="56w-WQ-BpX"/>
+                                <include reference="vTr-Cp-5dQ"/>
+                                <include reference="9x5-rv-X5b"/>
+                                <include reference="Hv9-ob-H7Y"/>
+                                <include reference="V1C-jp-Rlv"/>
+                                <include reference="MYl-bC-cNR"/>
+                                <include reference="Xv8-gS-Y3W"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="tuY-X2-IOK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="lmF-yN-ZUs">
+                            <connections>
+                                <action selector="onTappedButton:" destination="vXZ-lx-hvc" id="UiO-LA-fZ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftConstraint" destination="0ih-i9-YHV" id="ONq-Ne-90F"/>
+                        <outlet property="rightConstraint" destination="56w-WQ-BpX" id="wtu-am-bU2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1222.5" y="361"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cZp-TO-8wV">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GD2-FE-fI5" customClass="HUDViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1F-8E-o1P"/>
+                        <viewControllerLayoutGuide type="bottom" id="tyh-7Z-Vft"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gNA-W1-0To">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-R1-7O7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Lion">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="lionsButtonTapped:" destination="GD2-FE-fI5" eventType="touchUpInside" id="OTG-0J-v1m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-bG-Tfx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Tiger">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="105" width="35" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tigersButtonTapped:" destination="GD2-FE-fI5" eventType="touchUpInside" id="hyA-QI-QUN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NWm-R1-7O7"/>
+                                <exclude reference="Q4C-bG-Tfx"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="NWm-R1-7O7"/>
+                                <include reference="Q4C-bG-Tfx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93Y-JU-Hzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="361"/>
+        </scene>
+        <!--Top View Controller-->
+        <scene sceneID="YaT-zo-mP9">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ifM-lW-tnO" customClass="TopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0vw-Ey-PhM"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLO-Gi-Vdh"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y34-Ng-Dh5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="MoX-wm-m6f">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="93e-zU-Xlj">
+                            <connections>
+                                <action selector="onTappedButton:" destination="ifM-lW-tnO" id="Icf-Ne-0qf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2g-cd-C4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781" y="1030"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="inY-vo-g1u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="915-9c-YBs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PLP-KY-K3J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ifM-lW-tnO" kind="relationship" relationship="rootViewController" id="ads-Vm-LFk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNB-hl-pJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="1030"/>
         </scene>
     </scenes>
 </document>
