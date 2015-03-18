@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -51,14 +52,14 @@
                                 <exclude reference="bio-uJ-sxA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="MYl-bC-cNR"/>
+                                <exclude reference="Xv8-gS-Y3W"/>
                                 <exclude reference="0ih-i9-YHV"/>
                                 <exclude reference="56w-WQ-BpX"/>
                                 <exclude reference="vTr-Cp-5dQ"/>
                                 <exclude reference="9x5-rv-X5b"/>
                                 <exclude reference="Hv9-ob-H7Y"/>
                                 <exclude reference="V1C-jp-Rlv"/>
-                                <exclude reference="MYl-bC-cNR"/>
-                                <exclude reference="Xv8-gS-Y3W"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -67,14 +68,14 @@
                                 <include reference="bio-uJ-sxA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="MYl-bC-cNR"/>
+                                <include reference="Xv8-gS-Y3W"/>
                                 <include reference="0ih-i9-YHV"/>
                                 <include reference="56w-WQ-BpX"/>
                                 <include reference="vTr-Cp-5dQ"/>
                                 <include reference="9x5-rv-X5b"/>
                                 <include reference="Hv9-ob-H7Y"/>
                                 <include reference="V1C-jp-Rlv"/>
-                                <include reference="MYl-bC-cNR"/>
-                                <include reference="Xv8-gS-Y3W"/>
                             </mask>
                         </variation>
                     </view>
@@ -86,8 +87,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="hudContainerView" destination="rOo-QD-9tq" id="du6-h6-PIj"/>
                         <outlet property="leftConstraint" destination="0ih-i9-YHV" id="ONq-Ne-90F"/>
                         <outlet property="rightConstraint" destination="56w-WQ-BpX" id="wtu-am-bU2"/>
+                        <outlet property="topContainerView" destination="bio-uJ-sxA" id="Z6R-SY-iHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -103,6 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tyh-7Z-Vft"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gNA-W1-0To">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-R1-7O7">
@@ -158,9 +162,31 @@
                         <viewControllerLayoutGuide type="top" id="0vw-Ey-PhM"/>
                         <viewControllerLayoutGuide type="bottom" id="lLO-Gi-Vdh"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y34-Ng-Dh5">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="center" id="Y34-Ng-Dh5">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're On The TOP!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="995-58-BIo">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="289" width="148" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="995-58-BIo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="995-58-BIo"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MoX-wm-m6f">
