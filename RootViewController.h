@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HUDViewController.h"
+
+@protocol RootViewDelegate <NSObject>
+
+-(void) setAnimalImages:(id)viewController didTappedButton:(UIButton *)sender;
+
+
+@end
 
 @interface RootViewController : UIViewController
+@property (nonatomic, assign) id <RootViewDelegate> delegate;
+@property BOOL animal;
 
 @end

@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 @protocol HUDDelegate <NSObject>
 
+-(void)animalButtonTapped:(id)viewController didTappedButton:(UIButton *)sender;
+
 @end
+
 @interface HUDViewController : UIViewController
 
 - (IBAction)lionsButtonTapped:(id)sender;
 
 - (IBAction)tigersButtonTapped:(id)sender;
+
+@property (nonatomic, assign) id <HUDDelegate> delegate;
 
 @end

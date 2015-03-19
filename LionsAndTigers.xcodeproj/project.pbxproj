@@ -16,6 +16,7 @@
 		5E7BC7D61ABA044300ED7E53 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BC7D51ABA044300ED7E53 /* TopViewController.m */; };
 		5E7BC7D91ABA045700ED7E53 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BC7D81ABA045700ED7E53 /* HUDViewController.m */; };
 		5E7BC7DC1ABA16E200ED7E53 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BC7DB1ABA16E200ED7E53 /* RootViewController.m */; };
+		6B04F8741ABA34FE00B7C078 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04F8731ABA34FE00B7C078 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		5E7BC7D81ABA045700ED7E53 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		5E7BC7DA1ABA16E200ED7E53 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
 		5E7BC7DB1ABA16E200ED7E53 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
+		6B04F8721ABA34FE00B7C078 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		6B04F8731ABA34FE00B7C078 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				5E7BC7B81ABA021900ED7E53 /* Main.storyboard */,
+				6B04F8721ABA34FE00B7C078 /* CustomCollectionViewCell.h */,
+				6B04F8731ABA34FE00B7C078 /* CustomCollectionViewCell.m */,
 				5E7BC7DA1ABA16E200ED7E53 /* RootViewController.h */,
 				5E7BC7DB1ABA16E200ED7E53 /* RootViewController.m */,
 				5E7BC7D41ABA044300ED7E53 /* TopViewController.h */,
@@ -232,6 +237,7 @@
 				5E7BC7D91ABA045700ED7E53 /* HUDViewController.m in Sources */,
 				5E7BC7D61ABA044300ED7E53 /* TopViewController.m in Sources */,
 				5E7BC7B41ABA021900ED7E53 /* AppDelegate.m in Sources */,
+				6B04F8741ABA34FE00B7C078 /* CustomCollectionViewCell.m in Sources */,
 				5E7BC7B11ABA021900ED7E53 /* main.m in Sources */,
 				5E7BC7DC1ABA16E200ED7E53 /* RootViewController.m in Sources */,
 			);

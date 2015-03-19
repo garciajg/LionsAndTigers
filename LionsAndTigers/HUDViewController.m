@@ -8,16 +8,20 @@
 
 #import "HUDViewController.h"
 
-@interface HUDViewController ()
+@interface HUDViewController () 
 
 @end
 
 @implementation HUDViewController
 
 - (IBAction)lionsButtonTapped:(id)sender {
+    
+//-(void)animalButtonTapped:(id)viewController didTappedButton:(UIButton *)sender;
+    [self.delegate animalButtonTapped:self didTappedButton:sender];
 }
 
 - (IBAction)tigersButtonTapped:(id)sender {
+    [self.delegate animalButtonTapped:self didTappedButton:sender];
 }
 
 - (void)viewDidLoad {
